@@ -1,0 +1,5 @@
+{
+    "webhookurl": "WEBHOOK_URL",
+    "imageurl": "IMAGE_URL",
+    "corruptedimage": false
+}
